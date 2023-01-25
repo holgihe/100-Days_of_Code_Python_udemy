@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 ####################################################################
-#           - Day002_BMI-Calculator.py -
+#           - Day003_Leap_year.py -
 #
 # Copyright (C) 2023 holgihe <holgihe@gmx.com>
 #
 ####################################################################
 # Part of:  Udemy Course -100 Days of Code Python - Angela Yu
 #
-# Synopse:  Caclculates Your BMI - Body-Mass-Index
-#           ...
-# Input:    - Your body height (m - with . )
-#           - Your body weight (kg)
-# Output:   - BMI value
-# Todo:     ....
+# Synopse:  Calculates if a given year is a leap year,
+#           with 29. February
+# Input:    - Year
+#             ..
+# Output:   - Text, if it is a leap year
+#             ..
+# Todo:       ..
 ####################################################################
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -30,16 +31,27 @@
 ####################################################################
 
 # 🚨 Don't change the code below 👇
-height = input("enter your height in m: ")
-weight = input("enter your weight in kg: ")
+year = int(input("Which year do you want to check? "))
 # 🚨 Don't change the code above 👆
 
 #Write your code below this line 👇
-bmi = float(weight) / (float(height)**2)
-#bmi_as_int = int(bmi)
-bmi_as_int = round(bmi, 0)
+#This is how you work out whether if a particular year is a leap year.
+#    on every year that is evenly divisible by 4
+#    **except** every year that is evenly divisible by 100
+#    **unless** the year is also evenly divisible by 400
 
-print ("Your BMI is " + str(bmi))
-print ("Your BMI is " + str(bmi_as_int))
-print (f"Your BMI is {bmi} (used f-Function)")
-print (f"Your BMI is {bmi_as_int} (used f-Function)")
+div4 = year % 4
+div100 = year % 100
+div400 = year % 400
+
+#print (f"year = {year}; div4 = {div4}; div100 = {div100}; div400 = {div400};")
+
+if (year % 4 != 0):
+    print ("Not leap year.")
+elif (year % 100 == 0):
+    if (year % 400 == 0):
+        print("Leap year.")
+    else:
+        print ("Not leap year.")
+else:
+    print ("Leap Year.")

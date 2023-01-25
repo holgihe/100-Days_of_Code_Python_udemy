@@ -1,18 +1,26 @@
 #!/usr/bin/env python3
 ####################################################################
-#           - Day002_BMI-Calculator.py -
+#           - Day003_Pizza_order_practice.py -
 #
 # Copyright (C) 2023 holgihe <holgihe@gmx.com>
 #
 ####################################################################
 # Part of:  Udemy Course -100 Days of Code Python - Angela Yu
 #
-# Synopse:  Caclculates Your BMI - Body-Mass-Index
-#           ...
-# Input:    - Your body height (m - with . )
-#           - Your body weight (kg)
-# Output:   - BMI value
-# Todo:     ....
+# Synopse:  Ask three questions for options of pizza.
+#           Calculate then total bill prize of the pizza.
+#             Small Pizza: $15
+#             Medium Pizza: $20
+#             Large Pizza: $25
+#               Pepperoni for Small Pizza: +$2
+#               Pepperoni for Medium or Large Pizza: +$3
+#             Extra cheese for any size pizza: + $1
+# Input:    - Size of Pizza
+#           - Pepperoni ?
+#           - Extra Cheese ?
+# Output:   - Bill prize
+#             ..
+# Todo:       ..
 ####################################################################
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -30,16 +38,28 @@
 ####################################################################
 
 # 🚨 Don't change the code below 👇
-height = input("enter your height in m: ")
-weight = input("enter your weight in kg: ")
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M, or L ")
+add_pepperoni = input("Do you want pepperoni? Y or N ")
+extra_cheese = input("Do you want extra cheese? Y or N ")
 # 🚨 Don't change the code above 👆
 
 #Write your code below this line 👇
-bmi = float(weight) / (float(height)**2)
-#bmi_as_int = int(bmi)
-bmi_as_int = round(bmi, 0)
+bill = 0
+if size == "S":
+    bill += 15
+elif size == "M":
+    bill += 20
+elif size == "L":
+    bill += 25
 
-print ("Your BMI is " + str(bmi))
-print ("Your BMI is " + str(bmi_as_int))
-print (f"Your BMI is {bmi} (used f-Function)")
-print (f"Your BMI is {bmi_as_int} (used f-Function)")
+if add_pepperoni == "Y":
+    if size == "S":
+        bill += 2
+    else:
+        bill += 3
+
+if extra_cheese == "Y":
+    bill += 1
+
+print (f"Your final bill is: ${bill}")
