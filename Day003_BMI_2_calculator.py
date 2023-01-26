@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 ####################################################################
-#           - Day003_BMI_2_calculator.py -
+#           - Day003_BMI_2_calculator.py --
 #
 # Copyright (C) 2023 holgihe <holgihe@gmx.com>
 #
