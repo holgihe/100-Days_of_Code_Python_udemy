@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 ####################################################################
-#           - Day016_OOP_practice2.py -
+#           - Day016_Oop-Coffee-Maker_main.py -
 #
 # Copyright (C) 2023 holgihe <holgihe@gmx.com>
 #
 ####################################################################
 # Part of:  Udemy Course -100 Days of Code Python - Angela Yu
 #
-# Synopse:  Divers testing of Object-Oriented-Programming.
+# Synopse:  CoffeeMaker Machine, now in oop (Object Oriented Prog).
 ##
 ##
 # Input:    -
@@ -36,16 +36,26 @@
 ####################################################################
 
 
-from prettytable import PrettyTable
 
-table = PrettyTable()
+from Day016_menu import Menu
+from Day016_coffee_maker import CoffeeMaker
+from Day016_money_machine import MoneyMachine
 
-print(table)
-table.add_column("Pokemon Name", ["Pikachu", "Squirtle", "Charmander"])
-table.add_column("Type", ["Electric", "Fire", "Water"])
-print(table.align)
-print(table)
-table.align["Pokemon Name"]="l"
-table.align["Type"]="l"
-print(table.align)
-print(table)
+coffee_maker = CoffeeMaker()
+money_machine = MoneyMachine()
+menu = Menu()
+
+is_on = True
+
+while is_on:
+    options = menu.get_items()
+    choice = input(f"What would you like? ({options}): ")
+    if choice == "off":
+        is_on = False
+    elif choice == "report":
+        coffee_maker.report()
+        money_machine.report()
+    else:
+        drink = menu.find_drink(choice)
+        if coffee_maker.is_resource_sufficient(drink) and money_machine.make_payment(drink.cost):
+          coffee_maker.make_coffee(drink)
