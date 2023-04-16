@@ -2,7 +2,7 @@
 ####################################################################
 #           - Day014_Higher_Lower_Game.py -
 #
-# Copyright (C) 2023 holgihe <holgihe@gmx.com>
+# Copyright (C) 2023 holgihe <holgihe@gmx.net>
 #
 ####################################################################
 # Part of:  Udemy Course -100 Days of Code Python - Angela Yu

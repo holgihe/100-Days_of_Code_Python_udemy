@@ -2,7 +2,7 @@
 ####################################################################
 #           - Day005_Average_Height.py -
 #
-# Copyright (C) 2023 holgihe <holgihe@gmx.com>
+# Copyright (C) 2023 holgihe <holgihe@gmx.net>
 #
 ####################################################################
 # Part of:  Udemy Course -100 Days of Code Python - Angela Yu

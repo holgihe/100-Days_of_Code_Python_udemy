@@ -2,7 +2,7 @@
 ####################################################################
 # Day1_Variables.py - ask 2 Inputs & exchange in Variables
 #
-# Copyright (C) 2023 holgihe <holgihe@gmx.com>
+# Copyright (C) 2023 holgihe <holgihe@gmx.net>
 #
 ####################################################################
 # Udemy Course -

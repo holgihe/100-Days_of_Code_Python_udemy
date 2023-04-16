@@ -2,7 +2,7 @@
 ####################################################################
 #           - Day005_High_Score.py -
 #
-# Copyright (C) 2023 holgihe <holgihe@gmx.com>
+# Copyright (C) 2023 holgihe <holgihe@gmx.net>
 #
 ####################################################################
 # Part of:  Udemy Course -100 Days of Code Python - Angela Yu
