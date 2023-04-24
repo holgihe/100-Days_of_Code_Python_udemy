@@ -21,8 +21,8 @@
 #           - ok - Create & move ball
 #           - ok Collision detection of ball with wall, and bounce back
 #           - ok Collision detection of ball with paddle
-#           - Detect when paddle misses
-#           - Calculate Scoreboard
+#           - ok Detect when paddle misses
+#           - ok Calculate Scoreboard
 #
 # Version   (1.0) 2023-04-20    New created
 #

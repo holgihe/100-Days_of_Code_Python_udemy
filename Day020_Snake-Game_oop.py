@@ -1,23 +1,24 @@
 #!/usr/bin/env python3
 ####################################################################
-#           - Day020_Snake-Game_oop.py -
+#           - Day024_Mass-Mail-Merger.py -
 #
 # Copyright (C) 2023 holgihe <holgihe@gmx.net>
 #
 ####################################################################
 # Part of:  Udemy Course -100 Days of Code Python - Angela Yu
 #
-# Synopse:  Classic Snake Game from first NOKIA cellphones.
+# Synopse:  Mass Mail system.
 #           -
 #
-# Input:    -
-#           -
-# Output:   -
+# Input:    - Standard Letter (with data fields)
+#           - Data File (names of recipients)
+# Output:   - Mail messages (as text files)
 #           -
 #
 # Todo:     -
 #
-# Version   (1.0) 2023-04-17    New created
+# Version
+#           (1.0) 2023-04-23    New created
 #
 ####################################################################
 # This program is free software; you can redistribute it and/or
@@ -90,6 +91,11 @@ class Snake:
     new_segment.setpos(new_pos)
     self.segments.append(new_segment)
 
+  def reset(self):
+    for segment in self.segments:
+      segment.setpos(MAX_X_COORD+100, MAX_Y_COORD+100)
+    self.segments.clear()
+    self.create_snake()
 
   def up(self):
     if self.segments[0].heading() != DOWN:
@@ -125,19 +131,36 @@ class Scoreboard(Turtle):
   def __init__(self):
      super().__init__()
      self.score = 0
+     self.highscore = 0
+     with open("Day020_Snake-Game_highscore.txt") as highscore_datafile:
+       self.highscore = int(highscore_datafile.read())
      self.penup()
      self.hideturtle()
      self.color("white")
      self.setpos(0, MAX_Y_COORD-40)
-     self.write(f"Score: {self.score}", align="center", font=("Arial", 20, "normal"))
+     self.update_scoreboard()
+
+  def update_scoreboard(self):
+     self.clear()
+     self.write(f"Score: {self.score}    -   HighScore: {self.highscore}", align="center", font=("Arial", 20, "normal"))
+
 
   def add_score(self):
      self.score += 1
      self.clear()
-     self.write(f"Score: {self.score}", align="center", font=("Arial", 20, "normal"))
+     self.update_scoreboard()
+#     self.write(f"Score: {self.score}\nHigh Score: {self.highscore}", align="center", font=("Arial", 20, "normal"))
+
+  def reset(self):
+     if self.score > self.highscore:
+       self.highscore = self.score
+       with open("Day020_Snake-Game_highscore.txt", mode="w") as highscore_datafile:
+         highscore_datafile.write(f"{self.highscore}")
+     self.score = 0
+     self.update_scoreboard()
 
   def game_over(self):
-     self.setpos(0, 0)
+     #self.setpos(0, 0)
      self.write(f"Game Over !\nYour Score: {self.score}", align="center", font=("Arial", 28, "normal"))
 
 
@@ -175,11 +198,22 @@ while game_is_on:
     # if Snake head hits the window limits, the game is over
     game_is_on = False
     scoreboard.game_over()
+    scoreboard.reset()
+    screen.update()
+    game_is_on = True
+    snake.reset()
 
   for segment in snake.segments[1:]:
     if snake.segments[0].distance(segment) < 10:
       game_is_on = False
       scoreboard.game_over()
+      scoreboard.reset()
+      screen.update()
+      game_is_on = True
+      snake.reset()
+      screen.update()
+
+
 
 
 screen.exitonclick()
