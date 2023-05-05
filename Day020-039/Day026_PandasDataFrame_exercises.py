@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 ####################################################################
-#           - Day026_Dictionary_exercises.py -
+#           - Day026_PandasDataFrame_exercises.py -
 #
 # Copyright (C) 2023 holgihe <holgihe@gmx.net>
 #
 ####################################################################
 # Part of:  Udemy Course -100 Days of Code Python - Angela Yu
 #
-# Synopse:  - Dictionary exercises
+# Synopse:  - Pandas DataFrame exercises
 #           -
 #           -
 #           -
@@ -20,8 +20,7 @@
 #           -   -
 #
 # Version
-#           (1.1) 2023-05-05    Added 3.) Temperature Celsius->Fahrenheit
-#           (1.0) 2023-05-02    New created
+#           (1.0) 2023-05-05    New created
 #
 ####################################################################
 # This program is free software; you can redistribute it and/or
@@ -48,33 +47,27 @@
 # Main
 #
 # 1.) Create new Dictionary from original-Dictionary filtered by a if-condition
-names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
-import random
-students_scores = {student:random.randint(1, 100) for student in names}
-passed_students = {student:score for (student, score) in students_scores.items() if score >=60}
-print(passed_students)
-
-# 2.) You are going to use Dictionary Comprehension to create a dictionary
-#     called result that takes each word in the given sentence and calculates
-#     the number of letters in each word.
-sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
-# Don't change code above 👆
-# Write your code below:
-result = {word:len(word) for word in sentence.split()}
-print(result)
-
-
-# 3.) Convert Dictionary with Weekdays:Temperatures_Celsius to dictionary with Fahrenheit
-weather_c = {
-    "Monday": 12,
-    "Tuesday": 14,
-    "Wednesday": 15,
-    "Thursday": 14,
-    "Friday": 21,
-    "Saturday": 22,
-    "Sunday": 24,
+student_dict = {
+    "student": ["Angela", "James", "Lily"],
+    "score": [56, 76, 98]
 }
-# 🚨 Don't change code above 👆
-weather_f = {day:((temp_c*9/5)+32) for (day, temp_c) in weather_c.items()}
-# Write your code 👇 below:
-print(weather_f)
+
+for (key, value) in student_dict.items():
+    print(key)
+    print(value)
+
+import pandas
+
+student_data_frame = pandas.DataFrame(student_dict)
+print(student_data_frame)
+
+# Simple iteration - not useful
+for (key,value) in student_data_frame.items():
+    print(key)
+    print(value)
+
+# Using pandas iterrows() function
+for (index, row) in student_data_frame.iterrows():
+    print(row.student)
+    if row.student == "Angela":
+        print(f"Angela's score: {row.score}")
