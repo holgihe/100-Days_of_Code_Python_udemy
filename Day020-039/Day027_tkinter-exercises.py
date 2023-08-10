@@ -45,6 +45,27 @@ import tkinter
 #
 # Functions
 #
+def mybuttonclose_clicked():
+    print("Buttonclose_clicked")
+    mybuttonclose.flash()
+    mybuttonclose.flash()
+    mybuttonclose.flash()
+    mybuttonclose.flash()
+    mybuttonclose.flash()
+    window.title("Hey You clicked the close Button")
+    #exit(0)
+
+def mybutton_clicked():
+    print("myButton_clicked")
+    mybutton.flash()
+    mybutton.flash()
+    mybutton.flash()
+    mybutton.flash()
+    mybutton.flash()
+    window.title("Hey You clicked the myButton")
+    #exit(0)
+#
+
 # Classes
 #
 # Main
@@ -55,10 +76,19 @@ window.minsize(width=600,height=400)
 #
 mylabel = tkinter.Label(text="Labelmein", font=("Arial", 24, "bold"), highlightbackground="blue",highlightcolor="red", takefocus=1)
 mylabel.pack(side="left")
-mybutton = tkinter.Button(text="Button-My", highlightbackground="blue", highlightcolor="red", activeforeground="green")
+mybutton = tkinter.Button(text="Button-My", highlightbackground="blue", highlightcolor="red", activeforeground="green", command=mybutton_clicked)
 mybutton.pack(side="right")
 
+# tkinter change options/characteristics later:
+mybutton["text"]="ClickMe!"
+mybutton["activebackground"]="red"
 
+mybuttonclose = tkinter.Button(text="Close", font=("Courier", 26, "bold"), activebackground="gray", relief="sunken")
+mybuttonclose.pack(side="top")
+mybuttonclose["takefocus"]=1
+mybuttonclose["command"]=mybuttonclose_clicked
+mybuttonclose.flash()
+window.title("Changed title....")
 
 
 window.mainloop()
