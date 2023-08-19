@@ -63,6 +63,7 @@ def mybutton_clicked():
     mybutton.flash()
     mybutton.flash()
     window.title("Hey You clicked the myButton")
+    mylabel["text"]="mybutton clicked !"
     #exit(0)
 #
 
