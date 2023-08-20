@@ -20,7 +20,8 @@
 #           -   -
 #
 # Version
-#           (1.0) 2023-07-14    New created
+#           (1.01) 2023-08-20
+#           (1.0)  2023-07-14    New created
 #
 ####################################################################
 # This program is free software; you can redistribute it and/or
@@ -73,6 +74,13 @@ def calculate(**kwargs):
     return sum
 # Classes
 #
+class Car():
+    def __init__(self, **kw):
+        self.make   = kw["make"]
+        self.model  = kw["model"]
+        self.year   = kw.get("year")
+        self.colour = kw.get("colour")
+
 # Main
 #
 # First, we play with *args, that means positional arguments without names
@@ -88,3 +96,12 @@ print(result)
 # Second, now using **kwargs, so we can give name to the arguments, and position does not matter
 result = calculate (add=3, multiply=5, add2=7)
 print (f"The result from **kwargs arguments is: {result}")
+
+mycar = Car(make="Nissan", model="GT-R")
+# To show how **kw or **kwargs works:
+print(mycar.make)
+print(mycar.model)
+# and now print a variable value, which was not definied in mycar Class:
+print(mycar.year)
+print(mycar.colour)
+

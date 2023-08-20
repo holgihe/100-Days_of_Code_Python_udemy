@@ -62,7 +62,7 @@ def mybutton_clicked():
     mybutton.flash()
     mybutton.flash()
     mybutton.flash()
-    window.title("Hey You clicked the myButton")
+    window.title(myinput.get())
     mylabel["text"]="mybutton clicked !"
     #exit(0)
 #
@@ -91,5 +91,11 @@ mybuttonclose["command"]=mybuttonclose_clicked
 mybuttonclose.flash()
 window.title("Changed title....")
 
+mybuttonclose.config(text = "Close-new")
+
+# Entry
+myinput = tkinter.Entry()
+myinput.pack(side="right")
+myinput.config(relief = "raised", width = 15)
 
 window.mainloop()
