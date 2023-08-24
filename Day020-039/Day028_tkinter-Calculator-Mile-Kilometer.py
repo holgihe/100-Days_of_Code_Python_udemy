@@ -53,7 +53,11 @@ def buttoncalc_clicked ():
     print("buttoncalc_clicked")
     print(float(milesentry.get()) * 1.609347)
     kmentry.config(state="normal")
-    kmentry.insert(, str(float(milesentry.get()) * 1.609347))
+    kmentry.delete(0, tkinter.END)
+#   kmentry.insert(tkinter.END, str(float(milesentry.get()) * 1.609347))
+    kmentry.insert(tkinter.END, "{:.3f}".format((float(milesentry.get()) * 1.609347)))
+    kmentry.config(state="readonly")
+#   pro tip convert float into string with fixed decimals:    "{:.4f}".format(num)
 
 ####################################################################
 # Classes
