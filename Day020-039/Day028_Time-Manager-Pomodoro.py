@@ -65,6 +65,7 @@ countdownid = None
 # ---------------------------- TIMER RESET ------------------------------- #
 def reset_timer():
     global reps
+    global countdownid
     window.after_cancel(countdownid)
     reps = 0
     button_start.config(state="active")
