@@ -75,23 +75,24 @@ def generate_password():
 
 # Here now two versions of the code:  1.)Simple Beginner Code   - 2.)Python-style-Pro code !!
 # 1.) Simple Beginner code
-    nr_letters = random.randint(8, 10)
-    nr_symbols = random.randint(2, 4)
-    nr_numbers = random.randint(2, 4)
-    password_list = []
-    for char in range(nr_letters):
-        password_list.append(random.choice(letters))
-    for char in range(nr_symbols):
-            password_list += random.choice(symbols)
-    for char in range(nr_numbers):
-        password_list += random.choice(numbers)
-    random.shuffle(password_list)
+#    nr_letters = random.randint(8, 10)
+#    nr_symbols = random.randint(2, 4)
+#    nr_numbers = random.randint(2, 4)
+#    password_list = []
+#    for char in range(nr_letters):
+#        password_list.append(random.choice(letters))
+#    for char in range(nr_symbols):
+#            password_list += random.choice(symbols)
+#    for char in range(nr_numbers):
+#        password_list += random.choice(numbers)
+#    random.shuffle(password_list)
 
     # 2.) Python-Style-Pro Code:
     password_letters = [random.choice(letters) for _ in range(random.randint(8, 10))]
-
-
-
+    password_symbols = [random.choice(symbols) for _ in range(random.randint(2, 4))]
+    password_numbers = [random.choice(numbers) for _ in range(random.randint(2, 4))]
+    password_list = password_letters + password_symbols + password_numbers
+    random.shuffle(password_list)
 
     # Here are two ways to convert the List password_list into a string:
     # 1.) Simple traditional way - for Loop
