@@ -8,11 +8,8 @@
 # Part of:  Udemy Course -100 Days of Code Python - Angela Yu
 #
 # Synopse:  - Simple Password Manager - Now Json file format
-<<<<<<< HEAD
 #           - ..xyz
-=======
 #           -
->>>>>>> origin/main
 #           -
 #           -
 #
