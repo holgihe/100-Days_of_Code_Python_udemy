@@ -9,7 +9,7 @@
 #
 # Synopse:  - Simple Password Manager - Now Json file format
 #           - ..xyz
-#           -
+#           - .zyx
 #           -
 #           -
 #
