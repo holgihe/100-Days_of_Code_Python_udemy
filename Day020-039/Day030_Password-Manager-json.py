@@ -9,7 +9,11 @@
 #
 # Synopse:  - Simple Password Manager - Now Json file format
 #           - ..xyz
+<<<<<<< HEAD
 #           - .zyxxaaaaatt
+=======
+#           - .zyxxaaaaa
+>>>>>>> origin/main
 #           -
 #           -
 #
