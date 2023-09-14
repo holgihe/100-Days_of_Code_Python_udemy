@@ -2,7 +2,7 @@
 ####################################################################
 #           - Day029_Password-Manager.py -
 #
-# Copyright (C) 2023 holgihe <holgihe@gmx.net>
+# Copyright (C) 2023 holgihe <holgihe@eh-herrgen.com>
 #
 ####################################################################
 # Part of:  Udemy Course -100 Days of Code Python - Angela Yu

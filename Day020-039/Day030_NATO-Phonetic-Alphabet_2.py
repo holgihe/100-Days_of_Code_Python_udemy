@@ -2,7 +2,7 @@
 ####################################################################
 #           - Day030_NATO-Phonetic-Alphabet_2.py -
 #
-# Copyright (C) 2023 holgihe <holgihe@gmx.net>
+# Copyright (C) 2023 holgihe <holgihe@eh-herrgen.com>
 #
 ####################################################################
 # Part of:  Udemy Course -100 Days of Code Python - Angela Yu
@@ -19,9 +19,9 @@
 #           -   -
 #           -   -
 #
-# Version
-#           (1.2) 2023-08-31    Exception handling: letters not in alphabet
-#           (1.0) 2023-05-05    New created
+# Version   (1.21)  2023-09-14  Email updated
+#           (1.2)   2023-08-31  Exception handling: letters not in alphabet
+#           (1.0)   2023-05-05  New created
 #
 ####################################################################
 # This program is free software; you can redistribute it and/or
