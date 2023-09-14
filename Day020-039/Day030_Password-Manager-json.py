@@ -2,18 +2,15 @@
 ####################################################################
 #           - Day030_Password-Manager-json.py -
 #
-# Copyright (C) 2023 holgihe <holgihe@gmx.net>
+# Copyright (C) 2023 holgihe <holgihe@eh-herrgen.com>
 #
 ####################################################################
 # Part of:  Udemy Course -100 Days of Code Python - Angela Yu
 #
 # Synopse:  - Simple Password Manager - Now Json file format
 #           - ..xyz
-<<<<<<< HEAD
 #           - .zyxxaaaaatt
-=======
 #           - .zyxxaaaaa
->>>>>>> origin/main
 #           -
 #           -
 #
@@ -25,8 +22,8 @@
 #           -   -
 #           -   -
 #
-# Version
-#           (1.0) 2023-09-01     New created, added json, search function
+# Version   (1.1) 2023-09-14    contact email updated
+#           (1.0) 2023-09-01    New created, added json, search function
 #
 ####################################################################
 # This program is free software; you can redistribute it and/or
