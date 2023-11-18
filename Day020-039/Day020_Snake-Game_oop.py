@@ -15,7 +15,7 @@
 # Output:   - Mail messages (as text files)
 #           -
 #
-# Todo:     -
+# Todo:     -.
 #
 # Version
 #           (1.0) 2023-04-23    New created
